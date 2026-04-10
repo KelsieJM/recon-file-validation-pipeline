@@ -55,13 +55,14 @@ that query result. The comparison logic is identical regardless of data source.
 python main.py
 ```
 
-## Project Structure
+```
 main.py                      # main validation script
 recon_file.csv               # sample incoming recon file
-closed_accounts.csv          # reference dataset (simulates database lookup)
-recon_file_amended.csv       # generated on run - clean file for loading
-closed_accounts_reports.csv  # generated on run - removed accounts audit
+closed_accounts.csv          # reference dataset
+recon_file_amended.csv       # generated on run - clean file
+closed_accounts_reports.csv  # generated on run - audit
 run_log.csv                  # persistent run history
+```
 
 ## Future Improvements
 
