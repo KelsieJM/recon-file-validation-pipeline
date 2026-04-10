@@ -1,0 +1,8 @@
+account_id,agency,client,balance
+ACC001,Agency One,CLIENT_A,1500.00
+ACC002,Agency One,CLIENT_A,2300.00
+ACC003,Agency Two,CLIENT_B,800.00
+ACC004,Agency Two,CLIENT_B,4200.00
+ACC005,Agency One,CLIENT_A,950.00
+ACC006,Agency Three,CLIENT_C,3100.00
+ACC007,Agency Three,CLIENT_C,1750.00

@@ -1,0 +1,4 @@
+account_id,status,reason
+ACC002,closed,returned_to_client
+ACC004,closed,account_settled
+ACC007,closed,returned_to_client
