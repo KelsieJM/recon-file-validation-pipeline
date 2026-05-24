@@ -8,7 +8,7 @@ reconciliation files before they cause downstream processing failures.
 DCAs (Debt Collection Agencies) send weekly reconciliation files listing 
 all active accounts they are currently working on. Occasionally these files 
 contain accounts that have since been closed or returned to client. When 
-loaded, the process fails with a vague, unreadable error message — requiring 
+loaded, the process fails with a vague, unreadable error message, requiring 
 manual investigation by an analytics team to identify the failing accounts, 
 followed by back-and-forth with the DCA to amend and resend.
 
@@ -23,16 +23,14 @@ a full audit trail of what was removed and why.
 ## Business Decisions
 
 - Closed accounts are removed automatically and a clean file produced, but 
-loading remains a manual operator step. This is a deliberate soft automation 
-— preparation is automated, but a human gate remains before the file enters 
+loading remains a manual operator step. This is a deliberate soft automation: preparation is automated, but a human remains before the file enters 
 the system.
 
 - Three distinct operational scenarios are handled separately because each 
 requires different operator action. A single PASS/FAIL would obscure 
 information the operator needs to respond correctly.
 
-- In the all-rows-removed scenario, no amended file is produced. An empty 
-file loading to the system would cause its own downstream failures.
+- In the all-rows-removed scenario, no amended file is produced, as none is needed.
 
 - In production, the closed accounts reference data would be queried directly 
 from the accounts database using SQL. A static CSV is used here to simulate 
